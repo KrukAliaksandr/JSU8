@@ -1,0 +1,35 @@
+{
+  "name": "jsu8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "appium": "^1.10.1",
+    "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mobile": "protractor config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrukAliaksandr/JSU8.git"
+  },
+  "author": "Aliaksandr_Kruk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrukAliaksandr/JSU8/issues"
+  },
+  "homepage": "https://github.com/KrukAliaksandr/JSU8#readme"
+}
