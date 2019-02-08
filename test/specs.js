@@ -35,7 +35,7 @@ describe(`home page`, () => {
     await browser.wait(ExpectedConditions.presenceOf(userProfileBtn), 30000);
   });
 
-  // it(`should check home page title`, async () => {
+  // it(`should check home profile name`, async () => {
   //   await browser.wait(ExpectedConditions.presenceOf(userProfileBtn), 30000);
   //   await userProfileBtn.click();
   //   await browser.wait(ExpectedConditions.presenceOf(openProfileButton), 30000);
@@ -45,7 +45,7 @@ describe(`home page`, () => {
   //     .toContain(`Aliaksandr K.`);
   // });
 
-  // it(`should check home page title`, async () => {
+  // it(`should check text of result link`, async () => {
   //   await userProfileBtn.click();
   //   await sideBarGetSupportBtn.click();
   //   await searchInput.sendKeys(`Get started on Freelancer.com`);
@@ -55,21 +55,21 @@ describe(`home page`, () => {
   //     .toContain(`Getting started on Freelancer.com`);
   // });
 
-  it(`should check popular pages`, async () => {
+  it(`should check empty inbox status header`, async () => {
     await messagesBtn.click();
     await browser.wait(ExpectedConditions.presenceOf(inboxStatusHeading), 30000);
     expect(inboxStatusHeading.getText())
       .toContain(`All caught up now!`);
   });
 
-  it(`should check popular pages`, async () => {
+  it(`should check empty notifications page title `, async () => {
     await notificationsBtn.click();
     await browser.wait(ExpectedConditions.presenceOf(notificationsEmptyTitle), 30000);
     expect(notificationsEmptyTitle.getText())
       .toContain(`You don't have notifications yet but you can...`);
   });
 
-  it(`should check popular pages`, async () => {
+  it(`should check for recommended job tab text`, async () => {
     await jobsBtn.click();
     await browser.wait(ExpectedConditions.presenceOf(recommendedJobsTab), 30000);
     expect(recommendedJobsTab.getText())
