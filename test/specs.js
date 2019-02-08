@@ -35,25 +35,25 @@ describe(`home page`, () => {
     await browser.wait(ExpectedConditions.presenceOf(userProfileBtn), 30000);
   });
 
-  // it(`should check home profile name`, async () => {
-  //   await browser.wait(ExpectedConditions.presenceOf(userProfileBtn), 30000);
-  //   await userProfileBtn.click();
-  //   await browser.wait(ExpectedConditions.presenceOf(openProfileButton), 30000);
-  //   await openProfileButton.click();
-  //   await browser.wait(ExpectedConditions.presenceOf(profileName), 30000);
-  //   expect(profileName.getText())
-  //     .toContain(`Aliaksandr K.`);
-  // });
+  it(`should check home profile name`, async () => {
+    await browser.wait(ExpectedConditions.presenceOf(userProfileBtn), 30000);
+    await userProfileBtn.click();
+    await browser.wait(ExpectedConditions.presenceOf(openProfileButton), 30000);
+    await openProfileButton.click();
+    await browser.wait(ExpectedConditions.presenceOf(profileName), 30000);
+    expect(profileName.getText())
+      .toContain(`Aliaksandr K.`);
+  });
 
-  // it(`should check text of result link`, async () => {
-  //   await userProfileBtn.click();
-  //   await sideBarGetSupportBtn.click();
-  //   await searchInput.sendKeys(`Get started on Freelancer.com`);
-  //   await getHelpBtn.click();
-  //   await browser.wait(ExpectedConditions.presenceOf(resultLink), 30000);
-  //   expect(resultLink.getText())
-  //     .toContain(`Getting started on Freelancer.com`);
-  // });
+  it(`should check text of result link`, async () => {
+    await userProfileBtn.click();
+    await sideBarGetSupportBtn.click();
+    await searchInput.sendKeys(`Get started on Freelancer.com`);
+    await getHelpBtn.click();
+    await browser.wait(ExpectedConditions.presenceOf(resultLink), 30000);
+    expect(resultLink.getText())
+      .toContain(`Getting started on Freelancer.com`);
+  });
 
   it(`should check empty inbox status header`, async () => {
     await messagesBtn.click();
